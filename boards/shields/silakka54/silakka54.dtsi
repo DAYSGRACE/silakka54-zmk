@@ -37,10 +37,9 @@
 };
 
 &i2c0 {
-    compatible = "nordic,nrf-twi";
     status = "okay";
-    sda-gpios = <&pro_micro 4 GPIO_PULL_UP>;
-    scl-gpios = <&pro_micro 3 GPIO_PULL_UP>;
+    compatible = "nordic,nrf-twi";
+    clock-frequency = <I2C_BITRATE_STANDARD>;
 
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
