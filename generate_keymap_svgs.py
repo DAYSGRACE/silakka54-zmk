@@ -1,116 +1,217 @@
 #!/usr/bin/env python3
 """
 Genera SVGs de todas las capas del keymap silakka54 a partir de config/silakka54.keymap
+y usando el layout físico de config/silakka54.json
 """
 
 import re
 import os
+import json
+import math
 
-# Parsear el keymap
-keymap_file = "config/silakka54.keymap"
-with open(keymap_file, 'r') as f:
-    content = f.read()
+# Config
+KEYMAP_FILE = "config/silakka54.keymap"
+LAYOUT_FILE = "config/silakka54.json"
+OUTPUT_DIR = "assets"
+SCALE = 60  # Pixels per key unit
+KEY_SIZE = 50 # Size of key square
+PADDING = 5
 
-# Extraer cada capa
-layers = {}
-layer_pattern = r'(\w+)\s*\{[\s\n]*bindings\s*=\s*<(.*?)>;'
-for match in re.finditer(layer_pattern, content, re.DOTALL):
-    layer_name = match.group(1)
-    bindings_str = match.group(2)
-    # Limpiar bindings
-    bindings_str = bindings_str.replace('\n', ' ').replace('&', '').strip()
-    # Dividir por espacios, filtrar vacíos
-    keys = [k.strip() for k in bindings_str.split() if k.strip()]
-    layers[layer_name] = keys
+# Mapeo de nombres para que sean legibles
+KEY_LABELS = {
+    "NUMBER_1": "1", "NUMBER_2": "2", "NUMBER_3": "3", "NUMBER_4": "4", "NUMBER_5": "5",
+    "NUMBER_6": "6", "NUMBER_7": "7", "NUMBER_8": "8", "NUMBER_9": "9", "NUMBER_0": "0",
+    "N1": "1", "N2": "2", "N3": "3", "N4": "4", "N5": "5",
+    "N6": "6", "N7": "7", "N8": "8", "N9": "9", "N0": "0",
+    "LEFT_COMMAND": "GUI", "LCMD": "GUI", "RCMD": "GUI",
+    "LEFT_CONTROL": "CTRL", "LCTRL": "CTRL", "RCTRL": "CTRL",
+    "LEFT_SHIFT": "SHFT", "LSHFT": "SHFT", "RSHFT": "SHFT",
+    "LEFT_ALT": "ALT", "LALT": "ALT", "RALT": "ALT",
+    "BACKSPACE": "BSPC", "DELETE": "DEL", "ENTER": "ENT", "SPACE": "SPC",
+    "TAB": "TAB", "ESCAPE": "ESC",
+    "C_VOLUME_UP": "VOL+", "C_VOL_UP": "VOL+", "C_VOLUME_DOWN": "VOL-", "C_VOL_DN": "VOL-",
+    "C_MUTE": "MUTE", "C_PLAY_PAUSE": "PLAY", "C_NEXT": "NEXT", "C_PREV": "PREV",
+    "C_BRIGHTNESS_INC": "BRI+", "C_BRIGHTNESS_DEC": "BRI-",
+    "PAGE_UP": "PgUp", "PAGE_DOWN": "PgDn", "HOME": "HOME", "END": "END",
+    "UP_ARROW": "↑", "DOWN_ARROW": "↓", "LEFT_ARROW": "←", "RIGHT_ARROW": "→",
+    "LEFT": "←", "RIGHT": "→", "UP": "↑", "DOWN": "↓",
+    "EXCLAMATION": "!", "AT_SIGN": "@", "HASH": "#", "DOLLAR": "$", "PERCENT": "%",
+    "CARET": "^", "AMPERSAND": "&", "ASTERISK": "*", "LPAR": "(", "RPAR": ")",
+    "MINUS": "-", "EQUAL": "=", "PLUS": "+", "UNDERSCORE": "_",
+    "LBRC": "[", "RBRC": "]", "LBKT": "[", "RBKT": "]",
+    "PIPE": "|", "BACKSLASH": "\\", "SLASH": "/", "QUESTION": "?",
+    "SEMICOLON": ";", "COLON": ":", "SQT": "'", "DQT": '"', "SINGLE_QUOTE": "'",
+    "COMMA": ",", "PERIOD": ".", "DOT": ".", "GRAVE": "`", "TILDE": "~",
+    "CAPSLOCK": "CAPS", "PRINTSCREEN": "PRT", "SCROLLLOCK": "SCR", "PAUSE": "PAUSE",
+    "INSERT": "INS", 
+    "BT_CLR_ALL": "BT CLR", "BT_NXT": "BT >", "BT_PRV": "BT <",
+    "TRANS": "", "TRNS": ""
+}
 
-print(f"Found {len(layers)} layers: {list(layers.keys())}")
+def load_layout():
+    with open(LAYOUT_FILE, 'r') as f:
+        data = json.load(f)
+    # Extract list of key positions
+    # Assuming the first layout in layout dict is the one we want
+    layout_name = list(data['layouts'].keys())[0]
+    return data['layouts'][layout_name]['layout']
 
-# Funciones para generar SVG
-def truncate_key(key_text, max_len=8):
-    """Truncate key text to fit in the key box"""
-    if len(key_text) > max_len:
-        return key_text[:max_len-1] + "."
-    return key_text
+def parse_keymap():
+    with open(KEYMAP_FILE, 'r') as f:
+        content = f.read()
 
-def color_for_key(key_text):
-    """Return color based on key type"""
-    key_lower = key_text.lower()
-    if key_lower.startswith("mo"):
-        return "#ffe0b2"  # orange for layer keys
-    elif key_lower in ["space", "bksp", "enter", "backspace", "tab"]:
-        return "#c8e6c9"  # green for common modifiers
-    elif key_lower.startswith("kp"):
-        return "#f7f7f7"  # light for regular keys
-    else:
-        return "#bbdefb"  # blue for special
+    layers = {}
+    layer_pattern = r'(\w+)\s*\{[\s\n]*bindings\s*=\s*<(.*?)>;'
     
-def generate_svg(layer_name, keys):
-    """Generate SVG for a layer"""
-    # Layout: 4 rows of 12 keys + 6 thumbs
-    rows = [
-        keys[0:12],   # row 1
-        keys[12:24],  # row 2
-        keys[24:36],  # row 3
-        keys[36:48],  # row 4
-    ]
-    thumbs = keys[48:54] if len(keys) > 48 else []
-    
-    svg_lines = [
-        '<?xml version="1.0" encoding="UTF-8"?>',
-        '<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="700" viewBox="0 0 1500 700">',
-        '  <style>',
-        '    .k{fill:#f7f7f7;stroke:#333;stroke-width:2}',
-        '    .kl{font:14px monospace;fill:#111;text-anchor:middle}',
-        '    .title{font:20px sans-serif;fill:#111;font-weight:bold}',
-        '  </style>',
-        f'  <text x="750" y="30" class="title">Silakka54 - Layer: {layer_name}</text>',
-        '  <g transform="translate(60,60)">',
-    ]
-    
-    # Draw keys for each row
-    for row_idx, row in enumerate(rows):
-        y_offset = row_idx * 110
-        for col_idx, key_text in enumerate(row):
-            x_offset = col_idx * 110
-            key_label = key_text.replace("kp ", "").replace("mo ", "").upper()
-            color = color_for_key(key_text)
-            
-            svg_lines.append(f'    <!-- R{row_idx+1}C{col_idx+1} -->')
-            svg_lines.append(f'    <g transform="translate({x_offset},{y_offset})">')
-            svg_lines.append(f'      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="{color}"/>')
-            svg_lines.append(f'      <text x="45" y="40" class="kl">{truncate_key(key_label, 7)}</text>')
-            svg_lines.append(f'    </g>')
-    
-    # Draw thumb cluster
-    if thumbs:
-        svg_lines.append('    <!-- Thumb cluster -->')
-        thumb_y = len(rows) * 110 + 30
-        thumb_labels = [t.replace("kp ", "").replace("mo ", "").upper() for t in thumbs]
-        thumb_positions = [0, 110, 220, 430, 540, 650]  # spacing
+    for match in re.finditer(layer_pattern, content, re.DOTALL):
+        layer_name = match.group(1)
+        bindings_str = match.group(2)
+        # Check if bindings are cleaner
+        bindings_str = re.sub(r'/\*.*?\*/', '', bindings_str, flags=re.DOTALL) # remove comments
         
-        for idx, (label, x_pos) in enumerate(zip(thumb_labels, thumb_positions)):
-            color = color_for_key(thumbs[idx])
-            width = 190 if idx == 2 else 90  # space bar is wider
-            svg_lines.append(f'    <!-- T{idx+1} -->')
-            svg_lines.append(f'    <g transform="translate({x_pos},{thumb_y})">')
-            svg_lines.append(f'      <rect class="k" x="0" y="0" width="{width}" height="70" rx="6" ry="6" fill="{color}"/>')
-            svg_lines.append(f'      <text x="{width//2}" y="40" class="kl">{truncate_key(label, 7)}</text>')
-            svg_lines.append(f'    </g>')
-    
-    svg_lines.extend([
-        '  </g>',
-        '</svg>'
-    ])
-    
-    return '\n'.join(svg_lines)
+        # Split tokens
+        tokens = []
+        current_token = ""
+        depth = 0
+        
+        # Simple parser to handle spaces and &kp etc
+        clean_str = bindings_str.replace('\n', ' ').strip()
+        parts = [p for p in clean_str.split(' ') if p.strip()]
+        
+        keys = []
+        for p in parts:
+            if p.startswith('&'):
+                keys.append(p.replace('&', ''))
+            elif p.startswith('(') or p.endswith(')'):
+                # Handle macros or special params roughly
+                pass 
+                
+        # Better extraction: just grab words starting with & or plain words if valid
+        # This regex grabs keys like &kp A, &mo 1, etc.
+        keys = [x.strip() for x in re.findall(r'&[a-zA-Z0-9_]+(?:\s+[a-zA-Z0-9_]+)?', bindings_str)]
+        
+        # Clean up the keys list
+        cleaned_keys = []
+        for k in keys:
+            # remove &
+            k = k[1:]
+            cleaned_keys.append(k)
+            
+        layers[layer_name] = cleaned_keys
+        
+    return layers
 
-# Generate SVGs for each layer
-os.makedirs('assets', exist_ok=True)
-for layer_name, keys in layers.items():
-    svg_content = generate_svg(layer_name, keys)
-    filename = f'assets/silakka54_keymap_{layer_name}.svg'
-    with open(filename, 'w') as f:
-        f.write(svg_content)
-    print(f"Generated {filename}")
+def clean_label(key_raw):
+    # key_raw like "kp A", "mo 1", "msc SCRL_UP"
+    parts = key_raw.split()
+    if not parts: return ""
+    
+    behavior = parts[0]
+    param = parts[1] if len(parts) > 1 else ""
+    
+    label = ""
+    
+    if behavior == "kp":
+        label = KEY_LABELS.get(param, param)
+    elif behavior == "mo":
+        label = f"L{param}"
+    elif behavior == "mt":
+        # Mod-Tap: &mt LSHIFT A -> "Sft/A"
+        mod = parts[1] if len(parts) > 1 else ""
+        tap = parts[2] if len(parts) > 2 else ""
+        label = f"{KEY_LABELS.get(mod, mod)}/{KEY_LABELS.get(tap, tap)}"
+    elif behavior == "bt":
+        label = KEY_LABELS.get(f"BT_{param}", f"BT {param}")
+    elif behavior == "trans":
+        label = "↓"
+    elif behavior == "none":
+        label = ""
+    else:
+        # Fallback
+        full = "_".join(parts[1:]) if len(parts) > 1 else behavior
+        label = KEY_LABELS.get(full, full)
+        if label == full and len(label) > 6:
+             label = label[:6]
+             
+    return label.upper()
 
-print("All SVGs generated successfully!")
+def generate_svg(layer_name, keys, layout_data):
+    # Calculate bounds
+    max_x = max(item['x'] for item in layout_data) + 1
+    max_y = max(item['y'] for item in layout_data) + 1
+    
+    width = int(max_x * SCALE) + 20
+    height = int(max_y * SCALE) + 50
+    
+    svg = []
+    svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">')
+    svg.append(f'<style>')
+    svg.append('.key { fill: #f0f0f0; stroke: #666; stroke-width: 1; rx: 4; }')
+    svg.append('.label { font-family: sans-serif; font-size: 12px; text-anchor: middle; fill: #333; }')
+    svg.append('.sub { font-size: 9px; fill: #888; }')
+    svg.append('.mod { fill: #e0e0e0; }')
+    svg.append('.layer { fill: #d1c4e9; }')
+    svg.append('.special { fill: #b3e5fc; }')
+    svg.append('</style>')
+    
+    svg.append(f'<text x="20" y="30" font-family="sans-serif" font-size="20" font-weight="bold">Layer: {layer_name}</text>')
+    
+    # Check count
+    if len(keys) != len(layout_data):
+        print(f"Warning: Layer {layer_name} has {len(keys)} keys, layout has {len(layout_data)} positions. Truncating/Filling.")
+    
+    for i, item in enumerate(layout_data):
+        if i >= len(keys): break
+        
+        k = keys[i]
+        label = clean_label(k)
+        
+        # Position
+        x = item['x'] * SCALE + 10
+        y = item['y'] * SCALE + 40
+        w = KEY_SIZE
+        h = KEY_SIZE
+        
+        # Rotation? - Ignoring for now for readability, or simplest approximation
+        # If rotation exists, SVG rotate
+        r = item.get('r', 0)
+        transform = ""
+        if r != 0:
+            # Pivot around center of key? usually r is around a specific point, often x,y
+            # Simplified: just draw rect. The user wants to see "what is where".
+            # Perfect reconstruction requires parsing 'rx', 'ry' from JSON which are rotation origins.
+            pass
+            
+        # Color coding
+        cls = "key"
+        if k.startswith("mo "): cls += " layer"
+        elif k.startswith("kp L") or k.startswith("kp R"): cls += " mod" # heuristic for mods
+        elif label in ["ENT", "ESC", "BSPC", "TAB"]: cls += " special"
+        
+        svg.append(f'<g transform="translate({x},{y})">')
+        svg.append(f'<rect class="{cls}" width="{w}" height="{h}" />')
+        
+        # Center text
+        # If label is long, split lines?
+        svg.append(f'<text x="{w/2}" y="{h/2 + 5}" class="label">{label}</text>')
+        svg.append('</g>')
+        
+    svg.append('</svg>')
+    return '\n'.join(svg)
+
+def main():
+    layout = load_layout()
+    layers = parse_keymap()
+    
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    
+    for name, keys in layers.items():
+        print(f"Generating {name}...")
+        svg = generate_svg(name, keys, layout)
+        with open(f"{OUTPUT_DIR}/silakka54_keymap_{name}.svg", "w") as f:
+            f.write(svg)
+            
+    print("Done.")
+
+if __name__ == "__main__":
+    main()

@@ -1,282 +1,227 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="700" viewBox="0 0 1500 700">
-  <style>
-    .k{fill:#f7f7f7;stroke:#333;stroke-width:2}
-    .kl{font:14px monospace;fill:#111;text-anchor:middle}
-    .title{font:20px sans-serif;fill:#111;font-weight:bold}
-  </style>
-  <text x="750" y="30" class="title">Silakka54 - Layer: default_layer</text>
-  <g transform="translate(60,60)">
-    <!-- R1C1 -->
-    <g transform="translate(0,0)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R1C2 -->
-    <g transform="translate(110,0)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">ESC</text>
-    </g>
-    <!-- R1C3 -->
-    <g transform="translate(220,0)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R1C4 -->
-    <g transform="translate(330,0)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">NUMBER.</text>
-    </g>
-    <!-- R1C5 -->
-    <g transform="translate(440,0)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R1C6 -->
-    <g transform="translate(550,0)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">NUMBER.</text>
-    </g>
-    <!-- R1C7 -->
-    <g transform="translate(660,0)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R1C8 -->
-    <g transform="translate(770,0)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">NUMBER.</text>
-    </g>
-    <!-- R1C9 -->
-    <g transform="translate(880,0)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R1C10 -->
-    <g transform="translate(990,0)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">NUMBER.</text>
-    </g>
-    <!-- R1C11 -->
-    <g transform="translate(1100,0)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R1C12 -->
-    <g transform="translate(1210,0)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">NUMBER.</text>
-    </g>
-    <!-- R2C1 -->
-    <g transform="translate(0,110)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R2C2 -->
-    <g transform="translate(110,110)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">NUMBER.</text>
-    </g>
-    <!-- R2C3 -->
-    <g transform="translate(220,110)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R2C4 -->
-    <g transform="translate(330,110)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">NUMBER.</text>
-    </g>
-    <!-- R2C5 -->
-    <g transform="translate(440,110)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R2C6 -->
-    <g transform="translate(550,110)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">NUMBER.</text>
-    </g>
-    <!-- R2C7 -->
-    <g transform="translate(660,110)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R2C8 -->
-    <g transform="translate(770,110)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">NUMBER.</text>
-    </g>
-    <!-- R2C9 -->
-    <g transform="translate(880,110)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R2C10 -->
-    <g transform="translate(990,110)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">NUMBER.</text>
-    </g>
-    <!-- R2C11 -->
-    <g transform="translate(1100,110)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R2C12 -->
-    <g transform="translate(1210,110)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">DELETE</text>
-    </g>
-    <!-- R3C1 -->
-    <g transform="translate(0,220)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R3C2 -->
-    <g transform="translate(110,220)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#c8e6c9"/>
-      <text x="45" y="40" class="kl">TAB</text>
-    </g>
-    <!-- R3C3 -->
-    <g transform="translate(220,220)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R3C4 -->
-    <g transform="translate(330,220)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">Q</text>
-    </g>
-    <!-- R3C5 -->
-    <g transform="translate(440,220)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R3C6 -->
-    <g transform="translate(550,220)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">W</text>
-    </g>
-    <!-- R3C7 -->
-    <g transform="translate(660,220)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R3C8 -->
-    <g transform="translate(770,220)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">E</text>
-    </g>
-    <!-- R3C9 -->
-    <g transform="translate(880,220)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R3C10 -->
-    <g transform="translate(990,220)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">R</text>
-    </g>
-    <!-- R3C11 -->
-    <g transform="translate(1100,220)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R3C12 -->
-    <g transform="translate(1210,220)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">T</text>
-    </g>
-    <!-- R4C1 -->
-    <g transform="translate(0,330)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R4C2 -->
-    <g transform="translate(110,330)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">Y</text>
-    </g>
-    <!-- R4C3 -->
-    <g transform="translate(220,330)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R4C4 -->
-    <g transform="translate(330,330)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">U</text>
-    </g>
-    <!-- R4C5 -->
-    <g transform="translate(440,330)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R4C6 -->
-    <g transform="translate(550,330)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">I</text>
-    </g>
-    <!-- R4C7 -->
-    <g transform="translate(660,330)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R4C8 -->
-    <g transform="translate(770,330)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">O</text>
-    </g>
-    <!-- R4C9 -->
-    <g transform="translate(880,330)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R4C10 -->
-    <g transform="translate(990,330)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">P</text>
-    </g>
-    <!-- R4C11 -->
-    <g transform="translate(1100,330)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- R4C12 -->
-    <g transform="translate(1210,330)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">BACKSL.</text>
-    </g>
-    <!-- Thumb cluster -->
-    <!-- T1 -->
-    <g transform="translate(0,470)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- T2 -->
-    <g transform="translate(110,470)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">LSHFT</text>
-    </g>
-    <!-- T3 -->
-    <g transform="translate(220,470)">
-      <rect class="k" x="0" y="0" width="190" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="95" y="40" class="kl">KP</text>
-    </g>
-    <!-- T4 -->
-    <g transform="translate(430,470)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">A</text>
-    </g>
-    <!-- T5 -->
-    <g transform="translate(540,470)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
-      <text x="45" y="40" class="kl">KP</text>
-    </g>
-    <!-- T6 -->
-    <g transform="translate(650,470)">
-      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#bbdefb"/>
-      <text x="45" y="40" class="kl">S</text>
-    </g>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="359" viewBox="0 0 920 359">
+<style>
+.key { fill: #f0f0f0; stroke: #666; stroke-width: 1; rx: 4; }
+.label { font-family: sans-serif; font-size: 12px; text-anchor: middle; fill: #333; }
+.sub { font-size: 9px; fill: #888; }
+.mod { fill: #e0e0e0; }
+.layer { fill: #d1c4e9; }
+.special { fill: #b3e5fc; }
+</style>
+<text x="20" y="30" font-family="sans-serif" font-size="20" font-weight="bold">Layer: default_layer</text>
+<g transform="translate(10,62.5)">
+<rect class="key special" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">ESC</text>
+</g>
+<g transform="translate(70,62.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">1</text>
+</g>
+<g transform="translate(130,47.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">2</text>
+</g>
+<g transform="translate(190,40)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">3</text>
+</g>
+<g transform="translate(250,47.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">4</text>
+</g>
+<g transform="translate(310,55.0)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">5</text>
+</g>
+<g transform="translate(550,55.0)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">6</text>
+</g>
+<g transform="translate(610,47.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">7</text>
+</g>
+<g transform="translate(670,40)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">8</text>
+</g>
+<g transform="translate(730,47.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">9</text>
+</g>
+<g transform="translate(790,62.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">0</text>
+</g>
+<g transform="translate(850,62.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">DEL</text>
+</g>
+<g transform="translate(10,122.5)">
+<rect class="key special" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">TAB</text>
+</g>
+<g transform="translate(70,122.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">Q</text>
+</g>
+<g transform="translate(130,107.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">W</text>
+</g>
+<g transform="translate(190,100)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">E</text>
+</g>
+<g transform="translate(250,107.5)">
+<rect class="key mod" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">R</text>
+</g>
+<g transform="translate(310,115.0)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">T</text>
+</g>
+<g transform="translate(550,115.0)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">Y</text>
+</g>
+<g transform="translate(610,107.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">U</text>
+</g>
+<g transform="translate(670,100)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">I</text>
+</g>
+<g transform="translate(730,107.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">O</text>
+</g>
+<g transform="translate(790,122.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">P</text>
+</g>
+<g transform="translate(850,122.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">\</text>
+</g>
+<g transform="translate(10,182.5)">
+<rect class="key mod" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">SHFT</text>
+</g>
+<g transform="translate(70,182.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">A</text>
+</g>
+<g transform="translate(130,167.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">S</text>
+</g>
+<g transform="translate(190,160)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">D</text>
+</g>
+<g transform="translate(250,167.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">F</text>
+</g>
+<g transform="translate(310,175.0)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">G</text>
+</g>
+<g transform="translate(550,175.0)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">H</text>
+</g>
+<g transform="translate(610,167.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">J</text>
+</g>
+<g transform="translate(670,160)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">K</text>
+</g>
+<g transform="translate(730,167.5)">
+<rect class="key mod" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">L</text>
+</g>
+<g transform="translate(790,182.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">;</text>
+</g>
+<g transform="translate(850,182.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">'</text>
+</g>
+<g transform="translate(10,242.5)">
+<rect class="key mod" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">CTRL</text>
+</g>
+<g transform="translate(70,242.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">Z</text>
+</g>
+<g transform="translate(130,227.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">X</text>
+</g>
+<g transform="translate(190,220)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">C</text>
+</g>
+<g transform="translate(250,227.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">V</text>
+</g>
+<g transform="translate(310,235.0)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">B</text>
+</g>
+<g transform="translate(550,235.0)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">N</text>
+</g>
+<g transform="translate(610,227.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">M</text>
+</g>
+<g transform="translate(670,220)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">,</text>
+</g>
+<g transform="translate(730,227.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">.</text>
+</g>
+<g transform="translate(790,242.5)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">/</text>
+</g>
+<g transform="translate(850,242.5)">
+<rect class="key layer" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">L4</text>
+</g>
+<g transform="translate(218.8,287.5)">
+<rect class="key layer" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">L2</text>
+</g>
+<g transform="translate(235.0,287.5)">
+<rect class="key layer" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">L1</text>
+</g>
+<g transform="translate(250,257.5)">
+<rect class="key special" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">BSPC</text>
+</g>
+<g transform="translate(610,262.0)">
+<rect class="key" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">SPC</text>
+</g>
+<g transform="translate(631.0,289.0)">
+<rect class="key layer" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">L3</text>
+</g>
+<g transform="translate(652.0,289.0)">
+<rect class="key layer" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">L5</text>
+</g>
 </svg>

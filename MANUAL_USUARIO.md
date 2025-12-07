@@ -64,6 +64,10 @@ Enfocada en símbolos y movimientos rápidos.
 
 ### Capa 3 (Mantener `mo 3` / Pulgar Derecho Centro)
 - **Teclas F**: `F1` a `F12` en la fila superior de números.
+- **Bluetooth (Seguridad)**: 
+  - Para evitar borrados accidentales, los controles se movieron aquí.
+  - `BT_CLR_ALL` (Borrar todo): **`\`** (Tecla debajo de `F12` / Derecha fila QWERTY).
+  - `BT_PRV` / `BT_NXT`: A la izquierda de `BT_CLR_ALL` (Teclas `P` y `O` de esa fila).
 
 ### Capa 5 (Mantener `mo 5` / Pulgar Derecho Exterior)
 - **Numpad**: Convierte la mano derecha en un teclado numérico.
@@ -84,9 +88,9 @@ Puedes consultar los diagramas generados en la carpeta `assets` para ver visualm
 ### Problemas de Bluetooth
 Si tienes problemas para que tu PC detecte el teclado:
 1. **Reiniciar Conexiones (BT Clear)**:
-   - Ve a la **Capa 1** (manteniendo `mo 1`, pulgar izquierdo centro).
-   - Presiona la tecla **`\`** (esquina inferior derecha, donde suele estar `BT_CLR_ALL` en el keymap).
+   - Ve a la **Capa 3** (manteniendo `mo 3`, pulgar derecho centro).
+   - Presiona la tecla **`\`** (segunda fila, última tecla derecha).
    - Esto borrará todos los perfiles guardados en el teclado.
    - *Nota: Asegúrate de también "Olvidar dispositivo" en Windows.*
 2. **Cambiar Perfil**:
-   - En **Capa 1**, usa las teclas de la columna derecha para cambiar entre perfiles (si están configurados).
+   - En **Capa 3**, usa las teclas `P` y `O` (al lado de `\`) para anterior/siguiente.
