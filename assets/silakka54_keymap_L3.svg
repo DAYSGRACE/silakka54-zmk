@@ -94,15 +94,15 @@
 </g>
 <g transform="translate(730,107.5)">
 <rect class="key" width="50" height="50" />
-<text x="25.0" y="30.0" class="label">BT BT_PRV</text>
+<text x="25.0" y="30.0" class="label">↓</text>
 </g>
 <g transform="translate(790,122.5)">
 <rect class="key" width="50" height="50" />
-<text x="25.0" y="30.0" class="label">BT BT_NXT</text>
+<text x="25.0" y="30.0" class="label">↓</text>
 </g>
 <g transform="translate(850,122.5)">
 <rect class="key" width="50" height="50" />
-<text x="25.0" y="30.0" class="label">BT BT_CLR_ALL</text>
+<text x="25.0" y="30.0" class="label">↓</text>
 </g>
 <g transform="translate(10,182.5)">
 <rect class="key mod" width="50" height="50" />
@@ -190,11 +190,11 @@
 </g>
 <g transform="translate(730,227.5)">
 <rect class="key" width="50" height="50" />
-<text x="25.0" y="30.0" class="label">↓</text>
+<text x="25.0" y="30.0" class="label">BT BT_PRV</text>
 </g>
 <g transform="translate(790,242.5)">
 <rect class="key" width="50" height="50" />
-<text x="25.0" y="30.0" class="label">↓</text>
+<text x="25.0" y="30.0" class="label">BT BT_NXT</text>
 </g>
 <g transform="translate(850,242.5)">
 <rect class="key" width="50" height="50" />

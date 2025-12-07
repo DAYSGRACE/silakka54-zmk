@@ -65,17 +65,42 @@ Enfocada en símbolos y movimientos rápidos.
 ### Capa 3 (Mantener `mo 3` / Pulgar Derecho Centro)
 - **Teclas F**: `F1` a `F12` en la fila superior de números.
 - **Bluetooth (Seguridad)**: 
-  - Para evitar borrados accidentales, los controles se movieron aquí.
-  - `BT_CLR_ALL` (Borrar todo): **`\`** (Tecla debajo de `F12` / Derecha fila QWERTY).
-  - `BT_PRV` / `BT_NXT`: A la izquierda de `BT_CLR_ALL` (Teclas `P` y `O` de esa fila).
+  - `BT_CLR_ALL` (Borrar todo): **ELIMINADO** (Por seguridad, usar botón físico o reset).
+  - `BT_PRV` / `BT_NXT`: A la izquierda de `\` (Teclas `P` y `O` de esa fila). Cambio de Perfiles.
 
 ### Capa 5 (Mantener `mo 5` / Pulgar Derecho Exterior)
 - **Numpad**: Convierte la mano derecha en un teclado numérico.
   - `7`, `8`, `9` en `U`, `I`, `O`.
   - `4`, `5`, `6` en `J`, `K`, `L`.
   - `1`, `2`, `3` en `M`, `,`, `.`.
+  - `0` en la tecla **`>`** (abajo del `2` / tecla SLASH original).
 
 ---
+
+## 🔡 Acentos y Caracteres Especiales
+
+### Acentos (á, é, í, ó, ú) y Ñ
+Depende de tu configuración de **Idioma en Windows**:
+1.  **Si usas "Estados Unidos - Internacional"**:
+    - **Acentos**: Presiona `'` (comilla simple) y luego la vocal. (Ej: `'` + `a` = `á`).
+    - **Ñ**: Presiona `~` (Shift + Grave) y luego `n`. (Ej: `~` + `n` = `ñ`) o usa `ALT Derecha` + `n`.
+2.  **Si usas "Español"**:
+    - Las teclas coincidirán con la posición física del teclado español estándar.
+    - La tilde `´` suele estar al lado de la `ñ` (o `P` en este layout).
+    - La `ñ` suele estar en `;`.
+
+### Dónde están los símbolos faltantes
+En la **Capa 2** (`mo 2`):
+- **`+` (Más)** y **`=` (Igual)**: Esquina superior derecha.
+- **`` ` `` (Backtick) y `~` (Tilde)**:
+  - **Backtick (`` ` ``)**: Esquina superior izquierda (donde iría Tab/Esc), tecla `GRAVE`.
+  - **Tilde (`~`)**: Presiona `Shift` + esa misma tecla `GRAVE`.
+- **Mayúsculas (Caps Lock)**:
+  - Pulgar Izquierdo Centro (al lado de `mo 2`) en la Capa 2.
+
+### Bluetooth (Capa 3)
+- **Cambio de Perfil**: Muetos a la esquina inferior derecha para mayor seguridad.
+  - `BT_PRV` / `BT_NXT`: Teclas `.` y `/` de esa capa.
 
 ## 🎨 Imágenes de Referencia
 Puedes consultar los diagramas generados en la carpeta `assets` para ver visualmente cada capa:
@@ -87,10 +112,9 @@ Puedes consultar los diagramas generados en la carpeta `assets` para ver visualm
 
 ### Problemas de Bluetooth
 Si tienes problemas para que tu PC detecte el teclado:
-1. **Reiniciar Conexiones (BT Clear)**:
-   - Ve a la **Capa 3** (manteniendo `mo 3`, pulgar derecho centro).
-   - Presiona la tecla **`\`** (segunda fila, última tecla derecha).
-   - Esto borrará todos los perfiles guardados en el teclado.
+1. **Reiniciar Conexiones**:
+   - Se ha deshabilitado el atajo de teclado por seguridad.
+   - Usa un botón físico de reset si está configurado para tal fin.
    - *Nota: Asegúrate de también "Olvidar dispositivo" en Windows.*
 2. **Cambiar Perfil**:
    - En **Capa 3**, usa las teclas `P` y `O` (al lado de `\`) para anterior/siguiente.
