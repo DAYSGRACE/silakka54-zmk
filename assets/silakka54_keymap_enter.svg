@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="700" viewBox="0 0 1500 700">
+  <style>
+    .k{fill:#f7f7f7;stroke:#333;stroke-width:2}
+    .kl{font:14px monospace;fill:#111;text-anchor:middle}
+    .title{font:20px sans-serif;fill:#111;font-weight:bold}
+  </style>
+  <text x="750" y="30" class="title">Silakka54 - Layer: enter</text>
+  <g transform="translate(60,60)">
+    <!-- R1C1 -->
+    <g transform="translate(0,0)">
+      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#f7f7f7"/>
+      <text x="45" y="40" class="kl">KP</text>
+    </g>
+    <!-- R1C2 -->
+    <g transform="translate(110,0)">
+      <rect class="k" x="0" y="0" width="90" height="70" rx="6" ry="6" fill="#c8e6c9"/>
+      <text x="45" y="40" class="kl">ENTER</text>
+    </g>
+  </g>
+</svg>
