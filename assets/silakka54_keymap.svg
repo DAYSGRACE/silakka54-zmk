@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="700" viewBox="0 0 1500 700">
+  <style>
+    .k{fill:#f7f7f7;stroke:#333;stroke-width:2}
+    .kl{font:16px monospace;fill:#111;text-anchor:middle}
+    .title{font:20px sans-serif;fill:#111}
+  </style>
+  <text x="750" y="30" class="title">Silakka54 - Keymap (Default layer)</text>
+
+  <!-- grid settings -->
+  <g transform="translate(60,60)">
+    <!-- draw 4 rows x 12 cols -->
+    <!-- key size and spacing -->
+    <defs>
+      <rect id="key" width="90" height="70" rx="6" ry="6" />
+    </defs>
+
+    <!-- Row 1 -->
+    <g id="row1">
+      <!-- labels from keymap -->
+      <!-- ESC 1 2 3 4 5 6 7 8 9 0 DEL -->
+      <g transform="translate(0,0)">
+        <!-- columns 0..11 -->
+        <!-- col 0 -->
+        <use href="#key" class="k" x="0" y="0"/>
+        <text x="45" y="40" class="kl">ESC</text>
+      </g>
+      <g transform="translate(110,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">1</text></g>
+      <g transform="translate(220,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">2</text></g>
+      <g transform="translate(330,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">3</text></g>
+      <g transform="translate(440,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">4</text></g>
+      <g transform="translate(550,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">5</text></g>
+      <g transform="translate(660,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">6</text></g>
+      <g transform="translate(770,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">7</text></g>
+      <g transform="translate(880,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">8</text></g>
+      <g transform="translate(990,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">9</text></g>
+      <g transform="translate(1100,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">0</text></g>
+      <g transform="translate(1210,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">DEL</text></g>
+    </g>
+
+    <!-- Row 2 -->
+    <g id="row2" transform="translate(0,100)">
+      <!-- TAB Q W E R T Y U I O P BSLS -->
+      <g transform="translate(0,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">TAB</text></g>
+      <g transform="translate(110,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">Q</text></g>
+      <g transform="translate(220,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">W</text></g>
+      <g transform="translate(330,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">E</text></g>
+      <g transform="translate(440,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">R</text></g>
+      <g transform="translate(550,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">T</text></g>
+      <g transform="translate(660,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">Y</text></g>
+      <g transform="translate(770,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">U</text></g>
+      <g transform="translate(880,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">I</text></g>
+      <g transform="translate(990,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">O</text></g>
+      <g transform="translate(1100,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">P</text></g>
+      <g transform="translate(1210,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">\</text></g>
+    </g>
+
+    <!-- Row 3 -->
+    <g id="row3" transform="translate(0,200)">
+      <!-- LSHFT A S D F G H J K L ; ' -->
+      <g transform="translate(0,0)"><use href="#key" class="k" width="110" height="70"/><text x="55" y="40" class="kl">LSHFT</text></g>
+      <g transform="translate(110,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">A</text></g>
+      <g transform="translate(220,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">S</text></g>
+      <g transform="translate(330,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">D</text></g>
+      <g transform="translate(440,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">F</text></g>
+      <g transform="translate(550,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">G</text></g>
+      <g transform="translate(660,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">H</text></g>
+      <g transform="translate(770,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">J</text></g>
+      <g transform="translate(880,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">K</text></g>
+      <g transform="translate(990,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">L</text></g>
+      <g transform="translate(1100,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">;</text></g>
+      <g transform="translate(1210,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">'</text></g>
+    </g>
+
+    <!-- Row 4 -->
+    <g id="row4" transform="translate(0,300)">
+      <!-- LCTRL Z X C V B N M , . / MO4 -->
+      <g transform="translate(0,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">LCTRL</text></g>
+      <g transform="translate(110,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">Z</text></g>
+      <g transform="translate(220,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">X</text></g>
+      <g transform="translate(330,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">C</text></g>
+      <g transform="translate(440,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">V</text></g>
+      <g transform="translate(550,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">B</text></g>
+      <g transform="translate(660,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">N</text></g>
+      <g transform="translate(770,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">M</text></g>
+      <g transform="translate(880,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">,</text></g>
+      <g transform="translate(990,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">.</text></g>
+      <g transform="translate(1100,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">/</text></g>
+      <g transform="translate(1210,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">MO4</text></g>
+    </g>
+
+    <!-- Thumb cluster (6 keys centered) -->
+    <g id="thumb" transform="translate(220,420)">
+      <!-- positions: MO2, MO1, SPACE, BACKSPACE, MO3, MO5 -->
+      <g transform="translate(0,0)"><use href="#key" class="k" width="90" height="70"/><text x="45" y="40" class="kl">MO2</text></g>
+      <g transform="translate(110,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">MO1</text></g>
+      <g transform="translate(220,0)"><use href="#key" class="k" width="190" height="70"/><text x="95" y="40" class="kl">SPACE</text></g>
+      <g transform="translate(430,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">BKSP</text></g>
+      <g transform="translate(540,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">MO3</text></g>
+      <g transform="translate(650,0)"><use href="#key" class="k"/><text x="45" y="40" class="kl">MO5</text></g>
+    </g>
+
+  </g>
+</svg>
