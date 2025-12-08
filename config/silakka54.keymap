@@ -61,11 +61,11 @@
 
         L4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans              &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans              &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans              &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans              &trans     &trans  &trans  &trans  &trans  &mo 4
-                        &trans  &trans  &kp LEFT_COMMAND    &kp SPACE  &trans  &trans
+&trans        &kp RA(NUMBER_1)  &trans  &trans     &trans  &trans              &trans     &trans     &trans     &trans     &trans  &trans
+&kp CAPSLOCK  &trans            &trans  &kp RA(E)  &trans  &trans              &trans     &kp RA(U)  &kp RA(I)  &kp RA(O)  &trans  &trans
+&trans        &kp RA(A)         &trans  &trans     &trans  &trans              &trans     &trans     &trans     &trans     &trans  &trans
+&trans        &trans            &trans  &trans     &trans  &trans              &kp RA(N)  &trans     &trans     &trans     &kp RA(SLASH)  &mo 4
+                                        &trans     &kp LEFT_ALT  &kp LEFT_COMMAND    &kp SPACE  &trans     &trans
             >;
         };
 
