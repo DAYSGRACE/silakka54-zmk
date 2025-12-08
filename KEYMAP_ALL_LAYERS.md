@@ -62,5 +62,6 @@ Layout numpad (números 1-9 en la derecha).
 
 - **SPACE**: Movido al pulgar derecho (t1 en el thumb cluster) para comodidad con pulgar derecho.
 - **BACKSPACE**: Movido al pulgar izquierdo (t3).
+- **Shift Derecho**: Se ha añadido funcionalidad de Right Shift a las teclas `'` y `/` (mantener presionado).
 
 Para editar cualquier tecla, modifica `config/silakka54.keymap` y haz push. GitHub Actions recompilará automáticamente.
