@@ -32,7 +32,7 @@ Símbolos, flechas de navegación, CAPSLOCK.
 
 Acceso: mantén **MO3** (thumb derecho central)
 
-Teclas de función F1..F12, modificadores alternos.
+Teclas de función F1..F12, modificadores alternos, controles Bluetooth (Prev/Next Profile, **BT Reset**).
 
 ![L3](assets/silakka54_keymap_L3.svg)
 

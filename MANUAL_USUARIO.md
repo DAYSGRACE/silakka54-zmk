@@ -64,9 +64,9 @@ Enfocada en símbolos y movimientos rápidos.
 
 ### Capa 3 (Mantener `mo 3` / Pulgar Derecho Centro)
 - **Teclas F**: `F1` a `F12` en la fila superior de números.
-- **Bluetooth (Seguridad)**: 
-  - `BT_CLR_ALL` (Borrar todo): **ELIMINADO** (Por seguridad, usar botón físico o reset).
-  - `BT_PRV` / `BT_NXT`: A la izquierda de `\` (Teclas `P` y `O` de esa fila). Cambio de Perfiles.
+- **Bluetooth**: 
+  - `BT_CLR` (Borrar conexión): **Esquina inferior derecha** (Tecla MO4). Úsalo para desvincular.
+  - `BT_PRV` / `BT_NXT`: Teclas `.` y `/` (Period y Slash). Cambio de Perfiles.
 
 ### Capa 5 (Mantener `mo 5` / Pulgar Derecho Exterior)
 - **Numpad**: Convierte la mano derecha en un teclado numérico.
@@ -99,8 +99,8 @@ En la **Capa 2** (`mo 2`):
   - Pulgar Izquierdo Centro (al lado de `mo 2`) en la Capa 2.
 
 ### Bluetooth (Capa 3)
-- **Cambio de Perfil**: Muetos a la esquina inferior derecha para mayor seguridad.
-  - `BT_PRV` / `BT_NXT`: Teclas `.` y `/` de esa capa.
+- **Cambio de Perfil**: Teclas `.` y `/`.
+- **Reset conex**: Tecla esquina inferior derecha (`MO 4`).
 
 ## 🎨 Imágenes de Referencia
 Puedes consultar los diagramas generados en la carpeta `assets` para ver visualmente cada capa:
@@ -113,8 +113,7 @@ Puedes consultar los diagramas generados en la carpeta `assets` para ver visualm
 ### Problemas de Bluetooth
 Si tienes problemas para que tu PC detecte el teclado:
 1. **Reiniciar Conexiones**:
-   - Se ha deshabilitado el atajo de teclado por seguridad.
-   - Usa un botón físico de reset si está configurado para tal fin.
-   - *Nota: Asegúrate de también "Olvidar dispositivo" en Windows.*
+   - En **Capa 3**, presiona la tecla de la **esquina inferior derecha**.
+   - Esto borrará la conexión del perfil actual. Windows pedirá emparejar de nuevo.
 2. **Cambiar Perfil**:
-   - En **Capa 3**, usa las teclas `P` y `O` (al lado de `\`) para anterior/siguiente.
+   - En **Capa 3**, usa `.` (anterior) y `/` (siguiente).

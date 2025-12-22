@@ -31,7 +31,7 @@ L2 (capa 2)
 - Teclas de símbolos, flechas y CAPSLOCK en thumb cluster
 
 L3 (capa 3)
-- F1..F12 arriba; modificadores alternos (ej. ESC, ALT, CMD combos)
+- F1..F12 arriba; Bluetooth Prev/Next Profile y **BT Clear** (esquina inferior derecha).
 
 L4 (capa 4)
 - Principalmente transparentes, con `MO 4` en corner
