@@ -14,6 +14,11 @@
             bindings = <&kp ENTER>;
             key-positions = <31 33 32>;
         };
+
+        left_alt_combo {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <26 27>;
+        };
     };
 
     keymap {

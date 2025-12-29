@@ -11,6 +11,10 @@ Resumen: cada "layer" está listado abajo; las abreviaturas comunes:
 - `&trans`: transparente (hereda de la capa inferior)
 - `mkp` / `mmv` / `msc` / `bt`: comportamientos especiales (mouse, multimedia, bluetooth)
 
+Combos:
+- **Enter**: J + K + L
+- **Left Alt**: S + D (para multi-cursor)
+
 ---
 
 DEFAULT (capa principal)
