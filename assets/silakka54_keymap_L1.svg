@@ -209,8 +209,8 @@
 <text x="25.0" y="30.0" class="label">L1</text>
 </g>
 <g transform="translate(250,257.5)">
-<rect class="key" width="50" height="50" />
-<text x="25.0" y="30.0" class="label">↓</text>
+<rect class="key mod" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">ALT</text>
 </g>
 <g transform="translate(610,262.0)">
 <rect class="key" width="50" height="50" />

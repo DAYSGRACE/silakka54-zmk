@@ -13,8 +13,8 @@
 <text x="25.0" y="30.0" class="label">↓</text>
 </g>
 <g transform="translate(70,62.5)">
-<rect class="key" width="50" height="50" />
-<text x="25.0" y="30.0" class="label">↓</text>
+<rect class="key mod" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">RA(NUMBER_1)</text>
 </g>
 <g transform="translate(130,47.5)">
 <rect class="key" width="50" height="50" />
@@ -58,7 +58,7 @@
 </g>
 <g transform="translate(10,122.5)">
 <rect class="key" width="50" height="50" />
-<text x="25.0" y="30.0" class="label">↓</text>
+<text x="25.0" y="30.0" class="label">CAPS</text>
 </g>
 <g transform="translate(70,122.5)">
 <rect class="key" width="50" height="50" />
@@ -69,8 +69,8 @@
 <text x="25.0" y="30.0" class="label">↓</text>
 </g>
 <g transform="translate(190,100)">
-<rect class="key" width="50" height="50" />
-<text x="25.0" y="30.0" class="label">↓</text>
+<rect class="key mod" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">RA(E)</text>
 </g>
 <g transform="translate(250,107.5)">
 <rect class="key" width="50" height="50" />
@@ -85,16 +85,16 @@
 <text x="25.0" y="30.0" class="label">↓</text>
 </g>
 <g transform="translate(610,107.5)">
-<rect class="key" width="50" height="50" />
-<text x="25.0" y="30.0" class="label">↓</text>
+<rect class="key mod" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">RA(U)</text>
 </g>
 <g transform="translate(670,100)">
-<rect class="key" width="50" height="50" />
-<text x="25.0" y="30.0" class="label">↓</text>
+<rect class="key mod" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">RA(I)</text>
 </g>
 <g transform="translate(730,107.5)">
-<rect class="key" width="50" height="50" />
-<text x="25.0" y="30.0" class="label">↓</text>
+<rect class="key mod" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">RA(O)</text>
 </g>
 <g transform="translate(790,122.5)">
 <rect class="key" width="50" height="50" />
@@ -109,8 +109,8 @@
 <text x="25.0" y="30.0" class="label">↓</text>
 </g>
 <g transform="translate(70,182.5)">
-<rect class="key" width="50" height="50" />
-<text x="25.0" y="30.0" class="label">↓</text>
+<rect class="key mod" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">RA(A)</text>
 </g>
 <g transform="translate(130,167.5)">
 <rect class="key" width="50" height="50" />
@@ -177,8 +177,8 @@
 <text x="25.0" y="30.0" class="label">↓</text>
 </g>
 <g transform="translate(550,235.0)">
-<rect class="key" width="50" height="50" />
-<text x="25.0" y="30.0" class="label">↓</text>
+<rect class="key mod" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">RA(N)</text>
 </g>
 <g transform="translate(610,227.5)">
 <rect class="key" width="50" height="50" />
@@ -193,8 +193,8 @@
 <text x="25.0" y="30.0" class="label">↓</text>
 </g>
 <g transform="translate(790,242.5)">
-<rect class="key" width="50" height="50" />
-<text x="25.0" y="30.0" class="label">↓</text>
+<rect class="key mod" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">RA(SLASH)</text>
 </g>
 <g transform="translate(850,242.5)">
 <rect class="key layer" width="50" height="50" />
@@ -205,8 +205,8 @@
 <text x="25.0" y="30.0" class="label">↓</text>
 </g>
 <g transform="translate(235.0,287.5)">
-<rect class="key" width="50" height="50" />
-<text x="25.0" y="30.0" class="label">↓</text>
+<rect class="key mod" width="50" height="50" />
+<text x="25.0" y="30.0" class="label">ALT</text>
 </g>
 <g transform="translate(250,257.5)">
 <rect class="key mod" width="50" height="50" />

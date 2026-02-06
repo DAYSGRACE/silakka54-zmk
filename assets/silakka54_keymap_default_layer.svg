@@ -150,7 +150,7 @@
 </g>
 <g transform="translate(850,182.5)">
 <rect class="key" width="50" height="50" />
-<text x="25.0" y="30.0" class="label">'</text>
+<text x="25.0" y="30.0" class="label">SHFT/</text>
 </g>
 <g transform="translate(10,242.5)">
 <rect class="key mod" width="50" height="50" />
@@ -194,7 +194,7 @@
 </g>
 <g transform="translate(790,242.5)">
 <rect class="key" width="50" height="50" />
-<text x="25.0" y="30.0" class="label">/</text>
+<text x="25.0" y="30.0" class="label">SHFT/</text>
 </g>
 <g transform="translate(850,242.5)">
 <rect class="key layer" width="50" height="50" />
