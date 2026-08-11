@@ -20,20 +20,8 @@
             key-positions = <31 33 32>;
         };
 
-        windows_to_linux {
-            bindings = <&to 6>;
-            key-positions = <11 23 35>;
-            layers = <0>;
-            timeout-ms = <100>;
-        };
 
-        linux_to_windows {
-            bindings = <&to 0>;
-            key-positions = <11 23 35>;
-            layers = <6>;
-            timeout-ms = <100>;
-        };
-};
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -95,16 +83,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &kp N1  &kp N2  &kp N3
 &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &kp NUMBER_0  &trans
                         &trans  &trans  &kp LEFT_COMMAND    &trans  &trans  &mo 5
-            >;
-        };
-
-        L6 {
-            bindings = <
-                &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans
             >;
         };
     };
