@@ -75,10 +75,10 @@
         L1 {
             bindings = <
                 &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans          &trans          &trans          &trans        &trans        &kp C_PREV       &kp C_PLAY_PAUSE  &kp C_NEXT       &kp C_VOL_DN   &kp C_VOLUME_UP
-                &kp INS               &trans                 &msc SCRL_DOWN &mmv MOVE_UP    &msc SCRL_UP    &trans        &kp PAGE_UP   &kp HOME         &kp UP_ARROW      &kp END         &kp PAGE_DOWN  &trans
-                &trans                &trans                 &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans        &trans        &kp LEFT_ARROW   &kp DOWN_ARROW    &kp RIGHT       &trans         &trans
-                &kp LEFT_COMMAND      &trans                 &trans          &trans          &trans          &trans        &trans        &trans           &trans             &trans         &trans         &trans
-                &trans                &mo 1                  &kp LEFT_ALT    &mkp LCLK       &mkp RCLK        &mkp MCLK
+                &kp INS               &trans                &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP    &trans        &kp PAGE_UP   &kp HOME         &kp UP_ARROW      &kp END         &kp PAGE_DOWN  &trans
+                &trans                &trans                &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans        &trans        &kp LEFT_ARROW   &kp DOWN_ARROW    &kp RIGHT       &trans         &trans
+                &kp LEFT_COMMAND      &trans                &trans          &trans          &trans          &trans        &trans        &trans           &trans             &trans         &trans         &trans
+                &trans                &mo 1                 &kp LEFT_ALT    &mkp LCLK       &mkp RCLK        &mkp MCLK
             >;
         };
 
@@ -107,10 +107,10 @@
         L3 {
             bindings = <
                 &kp F1            &kp F2  &kp F3  &kp F4  &kp F5  &kp F6       &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-                &kp TAB          &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans   &trans   &trans
-                &kp LEFT_SHIFT   &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans   &trans   &trans
-                &kp LEFT_CONTROL &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &bt BT_PRV &bt BT_NXT &bt BT_CLR
-                &kp ESCAPE       &kp LEFT_ALT &kp LEFT_COMMAND &trans &mo 3 &trans
+                &kp TAB           &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans   &trans   &trans
+                &kp LEFT_SHIFT    &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans   &trans   &trans
+                &kp LEFT_CONTROL  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &bt BT_PRV &bt BT_NXT &bt BT_CLR
+                &kp ESCAPE        &kp LEFT_ALT &kp LEFT_COMMAND &trans &mo 3 &trans
             >;
         };
 
@@ -151,14 +151,11 @@
          * L6 - LINUX BASE
          * ============================================================
          *
-         * Las teclas inferiores mantienen la misma ergonomía:
-         *
-         * MO8 = equivalente Linux de MO2
-         * MO7 = equivalente Linux de MO1
-         * MO9 = equivalente Linux de MO3
-         * MO11 = equivalente Linux de MO5
-         *
-         * La posición física de MO4 pasa a MO10.
+         * MO7  = Mouse
+         * MO8  = Navigation / Symbols
+         * MO9  = F-keys + Multimedia + Brightness + Volume
+         * MO10 = Special characters
+         * MO11 = Super / Hyprland modifiers
          */
         L6 {
             bindings = <
@@ -172,108 +169,161 @@
 
         /*
          * ============================================================
-         * L7 - LINUX MODIFIERS / HYPRLAND
-         * ============================================================
+         * L7 - LINUX
+         * Mouse / Scroll / Clicks
          *
-         * La posición física de CTRL ahora es SUPER.
-         *
-         * MO7 + CTRL + SPACE
-         *     = SUPER + SPACE
-         *
-         * MO7 + CTRL + 1
-         *     = SUPER + 1
-         *
-         * MO7 + ALT + TAB
-         *     = ALT + TAB
-         *
-         * MO7 + SHIFT + ...
-         *     = SHIFT + ...
+         * Igual que Windows L1, pero SIN:
+         * - Brillo
+         * - Volumen
+         * - Multimedia
          */
         L7 {
             bindings = <
-                &trans &trans &trans &trans &trans &trans       &trans &trans &trans &trans &trans &trans
-                &kp TAB &trans &trans &trans &trans &trans     &trans &trans &trans &trans &trans &trans
-                &kp LEFT_SHIFT &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-                &kp LEFT_COMMAND &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
-                &trans &trans &kp BACKSPACE &kp SPACE &trans &trans
+                &trans          &trans          &trans          &trans          &trans          &trans        &trans        &trans          &trans          &trans          &trans         &trans
+                &kp INS         &trans          &msc SCRL_DOWN &mmv MOVE_UP    &msc SCRL_UP    &trans        &kp PAGE_UP   &kp HOME        &kp UP_ARROW    &kp END         &kp PAGE_DOWN  &trans
+                &trans          &trans          &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans        &trans        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT       &trans         &trans
+                &kp LEFT_COMMAND &trans         &trans          &trans          &trans          &trans        &trans        &trans          &trans          &trans          &trans         &trans
+                &trans          &mo 7           &kp LEFT_ALT    &mkp LCLK       &mkp RCLK       &mkp MCLK
             >;
         };
 
         /*
          * ============================================================
          * L8 - LINUX
-         * Navigation / Mouse / Scroll
+         * Navigation / Symbols
          *
-         * Es equivalente a L1, conservando sus funciones.
-         * ============================================================
+         * Igual que Windows L2.
+         *
+         * Incluye:
+         * - Flechas
+         * - Home / End
+         * - Page Up / Page Down
+         * - Grave
+         * - -
+         * - =
+         * - [
+         * - ]
+         * - Shift / Ctrl / Alt
+         *
+         * NO incluye:
+         * - Brillo
+         * - Volumen
+         * - Multimedia
          */
         L8 {
             bindings = <
-                &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans          &trans          &trans          &trans        &trans        &kp C_PREV       &kp C_PLAY_PAUSE  &kp C_NEXT       &kp C_VOL_DN   &kp C_VOLUME_UP
-                &kp INS               &trans                 &msc SCRL_DOWN &mmv MOVE_UP    &msc SCRL_UP    &trans        &kp PAGE_UP   &kp HOME         &kp UP_ARROW      &kp END         &kp PAGE_DOWN  &trans
-                &trans                &trans                 &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans        &trans        &kp LEFT_ARROW   &kp DOWN_ARROW    &kp RIGHT       &trans         &trans
-                &kp LEFT_COMMAND      &trans                 &trans          &trans          &trans          &trans        &trans        &trans           &trans             &trans         &trans         &trans
-                &trans                &mo 8                  &kp LEFT_ALT    &mkp LCLK       &mkp RCLK        &mkp MCLK
+                &trans          &trans  &trans          &trans          &trans        &trans    &trans          &trans        &trans       &kp MINUS  &kp EQUAL  &trans
+                &kp GRAVE       &trans  &trans          &kp UP_ARROW    &trans        &trans    &trans          &trans        &trans       &kp LBKT   &kp RBKT   &trans
+                &kp LEFT_SHIFT  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT     &trans    &trans          &trans        &trans       &trans     &trans     &trans
+                &kp LCTRL       &trans  &trans          &trans          &trans        &trans    &trans          &trans        &trans       &trans     &trans     &trans
+                &mo 8           &kp CAPSLOCK &trans    &kp LEFT_COMMAND &kp LEFT_ALT &trans
             >;
         };
 
         /*
          * ============================================================
          * L9 - LINUX
-         * Navigation / Symbols
-         *
-         * Equivalente a L2.
-         * Conserva:
-         * - +
-         * - -
-         * - [ ]
-         * - flechas
-         * - Ctrl / Shift / Alt
+         * F1-F12 + Multimedia + Brightness + Volume
          * ============================================================
+         *
+         * Acá se concentra todo el control del sistema.
          */
         L9 {
             bindings = <
-                &trans          &trans  &trans          &trans          &trans        &trans    &trans          &trans        &trans       &kp MINUS  &kp EQUAL  &trans
-                &kp GRAVE       &trans  &trans          &kp UP_ARROW    &trans        &trans    &trans          &trans        &trans       &kp LBKT   &kp RBKT   &trans
-                &kp LEFT_SHIFT  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT     &trans    &trans          &trans        &trans       &trans     &trans     &trans
-                &kp LEFT_COMMAND &trans &trans          &trans          &trans        &trans    &trans          &trans        &trans       &trans     &trans     &trans
-                &mo 9           &kp CAPSLOCK &trans    &kp LEFT_COMMAND &kp LEFT_ALT &trans
+                &kp F1            &kp F2  &kp F3  &kp F4  &kp F5  &kp F6       &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+                &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC &trans &trans &trans &trans       &trans &kp C_PREV &kp C_PLAY_PAUSE &kp C_NEXT &kp C_VOL_DN &kp C_VOLUME_UP
+                &trans          &trans  &trans  &trans  &trans  &trans       &trans &trans &trans &trans &trans &trans
+                &trans          &trans  &trans  &trans  &trans  &trans       &trans &trans &trans &trans &trans &trans
+                &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         /*
          * ============================================================
          * L10 - LINUX
-         * F1-F12
+         * Special characters
          *
-         * Bluetooth eliminado.
-         * ============================================================
+         * Igual que Windows L4.
          */
         L10 {
             bindings = <
-                &kp F1            &kp F2  &kp F3  &kp F4  &kp F5  &kp F6       &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-                &kp TAB          &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans   &trans   &trans
-                &kp LEFT_SHIFT   &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans   &trans   &trans
-                &kp LEFT_COMMAND &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans   &trans   &trans
-                &kp ESCAPE       &kp LEFT_ALT &kp LEFT_COMMAND &trans &trans &trans
+                &trans          &kp RA(NUMBER_1) &trans &trans &trans &trans       &trans &trans &trans &trans &trans &trans
+                &kp CAPSLOCK    &trans           &trans &kp RA(E) &trans &trans  &trans &kp RA(U) &kp RA(I) &kp RA(O) &trans &trans
+                &trans          &kp RA(A)        &trans &trans &trans &trans     &trans &trans &trans &trans &trans &trans
+                &trans          &trans           &trans &trans &trans &trans     &kp RA(N) &trans &trans &trans &kp RA(SLASH) &trans
+                &trans          &kp LEFT_ALT     &kp LEFT_COMMAND &kp SPACE &trans &trans
             >;
         };
 
         /*
          * ============================================================
          * L11 - LINUX
-         * Numpad
-         *
-         * Equivalente a L5.
+         * SUPER / HYPRLAND
          * ============================================================
+         *
+         * La posición física de CTRL se convierte en SUPER.
+         *
+         * El resto de las teclas es TRANSPARENTE.
+         *
+         * Esto permite combinar físicamente:
+         *
+         * L11 + CTRL físico + SPACE
+         *     -> SUPER + SPACE
+         *
+         * L11 + CTRL físico + SHIFT + SPACE
+         *     -> SUPER + SHIFT + SPACE
+         *
+         * L11 + CTRL físico + ALT + SPACE
+         *     -> SUPER + ALT + SPACE
+         *
+         * L11 + CTRL físico + 1
+         *     -> SUPER + 1
+         *
+         * L11 + CTRL físico + SHIFT + 1
+         *     -> SUPER + SHIFT + 1
+         *
+         * L11 + CTRL físico + TAB
+         *     -> SUPER + TAB
+         *
+         * Recomendados para Hyprland / Noctalia:
+         *
+         * SUPER + SPACE
+         *     Launcher
+         *
+         * SUPER + S
+         *     Control Center
+         *
+         * SUPER + Q
+         *     Cerrar ventana
+         *
+         * SUPER + F
+         *     Fullscreen
+         *
+         * SUPER + V
+         *     Toggle floating
+         *
+         * SUPER + 1..9
+         *     Workspace
+         *
+         * SUPER + SHIFT + 1..9
+         *     Mover ventana al workspace
+         *
+         * SUPER + TAB
+         *     Cambiar ventana
+         *
+         * SUPER + SHIFT + S
+         *     Screenshot
+         *
+         * SUPER + SHIFT + R
+         *     Recargar configuración
          */
         L11 {
             bindings = <
-                &trans &trans &trans &trans &trans &trans       &trans &trans &trans &kp N7 &kp N8 &kp N9
-                &trans &trans &trans &trans &trans &trans       &trans &trans &trans &kp N4 &kp N5 &kp N6
-                &trans &trans &trans &trans &trans &trans       &trans &trans &trans &kp N1 &kp N2 &kp N3
-                &trans &trans &trans &trans &trans &trans       &trans &trans &trans &trans &kp NUMBER_0 &trans
-                &trans &trans &kp LEFT_COMMAND &trans &trans &mo 11
+                &trans          &trans &trans &trans &trans &trans       &trans &trans &trans &trans &trans &trans
+                &trans          &trans &trans &trans &trans &trans       &trans &trans &trans &trans &trans &trans
+                &trans          &trans &trans &trans &trans &trans       &trans &trans &trans &trans &trans &trans
+                &kp LEFT_COMMAND &trans &trans &trans &trans &trans     &trans &trans &trans &trans &trans &trans
+                &trans          &trans &trans &trans &trans &trans
             >;
         };
     };
