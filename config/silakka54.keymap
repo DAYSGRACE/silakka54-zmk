@@ -163,7 +163,7 @@
                 &trans &trans &trans &trans &trans &trans       &trans &trans &trans &trans &trans &trans
                 &trans &trans &trans &trans &trans &trans       &trans &trans &trans &trans &trans &trans
                 &trans &trans &trans &trans &trans &trans       &trans &trans &trans &trans &trans &mo 10
-                &mo 8 &mo 7 &kp BACKSPACE &kp SPACE &mo 9 &mo 11
+                &mo 8 &mo 7 &kp BACKSPACE &kp SPACE &mo 9 &kp LEFT_COMMAND
             >;
         };
 
